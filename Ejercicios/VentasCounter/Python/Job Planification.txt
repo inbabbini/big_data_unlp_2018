@@ -1,0 +1,17 @@
+Job Planification
+
+# to get most selled product
+# to get branch with most sales variety
+# to get branch with most sales
+
+# Job1: organice and compact data
+Raw ->	branch, product, sum(amount)
+
+# Job2: Most selled product
+branch, product, amount -> product, amount -> product, totalSalesAmount
+
+# Job3: Most varied branch
+branch, product, amount -> branch, product -> branch, uniqueProdAmount
+
+#Job4: Most sales branch
+branch, product, amount -> branch, amount -> branch, totalSales
