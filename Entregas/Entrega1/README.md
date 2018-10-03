@@ -76,7 +76,7 @@ map
 write <value, 1>
 
 reduce
-write <value, list.length == 2>
+write <value, list.length == 2> # esto imprime todos los numeros, no solo los de B
 ```
 
 

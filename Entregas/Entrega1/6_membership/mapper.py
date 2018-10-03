@@ -10,4 +10,4 @@ for line in sys.stdin:
     #group, number = line.split('\t')
 
     #print to STDOUT
-    print 1
+    print "%s\t%i" % (number, group)
