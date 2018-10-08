@@ -6,8 +6,8 @@ import sys
 #read form STDIN
 for line in sys.stdin:
 	#parse per line
-    group, number = line.strip() # clean line
-    #group, number = line.split('\t')
+    line = line.strip() # clean line
+    group, number = line.split('\t')
 
     #print to STDOUT
-    print "%s\t%i" % (number, group)
+    print "%s\t%s" % (number, group)

@@ -9,7 +9,7 @@ count = 0
 # read from STDIN
 for line in sys.stdin:
     line = line.strip() #clean line
-    key, quantity = line.split('\t')
+    quantity = line
     count += int(quantity)
 
 print(count)

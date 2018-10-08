@@ -12,13 +12,13 @@ for line in sys.stdin:
     read_number = line.strip() #clean line & read number
 
     if (current_number != read_number):
-    	if (current_number != None) && (current_count == 1):
-    		print current_number
+    	if (current_number != None) and (current_count == 1):
+    		print("X\t%s" % current_number)
     	current_number = read_number
     	current_count = 1
     else:
-    	current_count++
+    	current_count += 1
 
 # check last number
 if (current_count == 1):
-    print current_number
+    print("X\t%s" % current_number)
