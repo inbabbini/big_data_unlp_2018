@@ -14,7 +14,7 @@ for line in sys.stdin:
     read_number, read_group = line.split('\t')
 
     if (current_number != read_number) do:
-    	if (current_number != None) && (len(current_groups) == 1 && current_groups[0] == "A") do:
+    	if (current_number != None) and (len(current_groups) == 1 and current_groups[0] == "A") do:
     		print(current_number)
     	current_number = read_number
     	current_groups = [read_group]
@@ -22,5 +22,5 @@ for line in sys.stdin:
     	current_groups.append(read_group)
 
 # print last number
-if (len(current_groups) == 1 && current_groups[0] == "A"):
+if (len(current_groups) == 1 and current_groups[0] == "A"):
 	print(current_number)

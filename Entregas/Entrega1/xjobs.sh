@@ -2,11 +2,8 @@
 
 # Move files to hdfs
 hdfs dfs -mkdir xjobs
-hdfs dfs -mkdir xjobs/datasets
 
-for file in datasets/*; do
-  hdfs dfs -copyFromLocal $file xjobs/$file
-done
+hdfs dfs -copyFromLocal datasets xjobs/datasets
 
 # Format data files
 hdfs dfs -mkdir xjobs/fdatasets

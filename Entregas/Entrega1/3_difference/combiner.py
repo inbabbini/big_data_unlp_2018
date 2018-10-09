@@ -14,13 +14,13 @@ for line in sys.stdin:
     read_number, read_group = line.split('\t')
 
     if (current_number != read_number) do:
-    	if (current_number != None) and (len(current_groups) == 1 and current_groups[0] == "U") do:
-    		print(current_number)
+    	if (current_number != None) and (len(current_groups) < 2):
+    		print("%s\t%s" % current_number, current_groups[0])
     	current_number = read_number
     	current_groups = [read_group]
     else:
     	current_groups.append(read_group)
 
 # print last number
-if (len(current_groups) == 1 and current_groups[0] == "U"):
+if (len(current_groups) < 2):
 	print(current_number)
