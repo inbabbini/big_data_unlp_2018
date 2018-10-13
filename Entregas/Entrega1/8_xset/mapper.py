@@ -9,4 +9,4 @@ for line in sys.stdin:
     group, number = line.strip().split("\t") # clean line
 
     #print to STDOUT
-    print "%s" % (number)
+    print ("%s\t1" % (number))

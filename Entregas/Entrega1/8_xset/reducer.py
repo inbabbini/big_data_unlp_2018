@@ -17,7 +17,7 @@ for line in sys.stdin:
     	current_number = read_number
     	current_count = int(read_count)
     else:
-    	current_count += 1
+    	current_count += int(read_count)
 
 # check last number
 if (current_count == 1):

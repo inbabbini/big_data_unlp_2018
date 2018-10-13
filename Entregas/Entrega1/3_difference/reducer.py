@@ -13,8 +13,8 @@ for line in sys.stdin:
     line = line.strip() #clean line
     read_number, read_group = line.split('\t')
 
-    if (current_number != read_number) do:
-    	if (current_number != None) and (len(current_groups) == 1 and current_groups[0] == "A") do:
+    if (current_number != read_number):
+    	if (current_number != None) and (len(current_groups) == 1 and current_groups[0] == "A"):
     		print(current_number)
     	current_number = read_number
     	current_groups = [read_group]

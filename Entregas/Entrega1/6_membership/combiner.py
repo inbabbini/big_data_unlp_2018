@@ -14,22 +14,20 @@ for line in sys.stdin:
     read_number, read_group = line.split('\t')
 
     if (current_number != read_number):
-    	if (current_number != None):
-        if (len(current_groups) == 2):
-    		  print "%s\t%s" % (current_number, "SI")
-        elif (len(current_groups) == 1 and current_groups[0] == "E"):
-          print "%s\t%s" % (current_number, "NO")
-    	current_number = read_number
-    	current_groups = [read_group]
+        if (current_number != None):
+            if (len(current_groups) == 2):
+                print ("%s\t%s" % ("-1", current_number))
+            else:
+                for group in current_groups:
+                    print ("%s\t%s" % (current_number, group))
+        current_number = read_number
+        current_groups = [read_group]
     else:
-    	current_groups.append(read_group)
+        current_groups.append(read_group)
 
 # print last number
-if (len(current_groups) == 2 ):
-  print "%s\t%s" % (current_number, "SI")
-elif (len(current_groups) == 1 and current_groups[0] == "E"):
-  print "%s\t%s" % (current_number, "NO")
-
-
-
-#todo
+if (len(current_groups) == 2):
+  print ("%s\t%s" % ("-1", current_number))
+else:
+  for group in current_groups:
+    print ("%s\t%s" % (current_number, group))
